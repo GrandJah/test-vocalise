@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link rel="stylesheet"  href="main.css">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div id="login" class="panel" hidden>
+    <form id="loginForm" class="form-group needs-validation">
+        <div class="input-group">
+            <input name="login" pattern="[A-zА-я]{6,50}" class="form-control need-valid"
+                   placeholder="Login" autocomplete="off" type="text" title="login" required>
+            <div class="invalid-feedback">логин должен содержать только буквы и быть длиннее 6
+                символов
+            </div>
+        </div>
+        <div class="input-group">
+            <input type="password" pattern="[A-zА-я0-9]{6,50}" class="form-control need-valid"
+                   placeholder="Password" autocomplete="off" name="password" title="password"
+                   required>
+            <div class="invalid-feedback">Пароль может содержать буквы и цифры, а также быть длиннее
+                6 символов
+            </div>
+        </div>
+        <br>
+        <button id="loginButton" class="btn btn-lg btn-primary btn-block" type="button"
+                onclick="logIn()" disabled>Войти
+        </button>
+        <button id="registrationButton" class="btn btn-lg btn-primary btn-block" type="button"
+                onclick="registrationAccount()" disabled hidden>Создать аккаунт
+        </button>
+        <div class="status-group text-center"><label id="status_registration"></label></div>
+        <button id="toggleForm" class="btn btn-secondary btn-block" type="button"
+                onclick="registration()" _toggle="Вход">Регистрация
+        </button>
+    </form>
+</div>
+
+
+<div id="action" class="panel" hidden>
+    <form id="form" class="form-group">
+        <div>
+            <button id="in" class="btn btn-success btn-lg" type="button" onclick="act('in')">
+                Пришел
+            </button>
+            <button id="out" class="btn btn-danger btn-lg" type="button" onclick="act('out')">
+                Ушел
+            </button>
+        </div>
+        <button id="report" class="btn btn-lg btn-info btn-block" type="button"
+                onclick="act('report',setTimeWorkString)">Остановить и скачать отчет</button>
+        <button id="logout" class="btn btn-lg btn-primary btn-block" type="button"
+                onclick="logOut()"> Выйти
+        </button>
+    </form>
+    <br>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+crossorigin="anonymous"></script>
+<script type="text/javascript" src="main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+crossorigin="anonymous"></script>
+</body>
+</html>

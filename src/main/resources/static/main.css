@@ -1,0 +1,23 @@
+body {
+    padding: 15px;
+}
+
+#loginForm, #form {
+    max-width: 250px;
+    margin: auto
+}
+
+#report, #logout, #toggleForm, #in, #out {
+    width:98%;
+    margin: 15px auto 30px;
+}
+
+
+.status-group {
+    max-width: 160px;
+    margin: auto
+}
+
+#report{
+    white-space: normal;
+}
