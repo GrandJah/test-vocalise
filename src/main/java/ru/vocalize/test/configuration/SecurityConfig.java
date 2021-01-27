@@ -33,7 +33,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         .disable()
         .addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class)
         .authorizeRequests()
-        .antMatchers("/status", "/in", "/out", "/report")
+        .antMatchers("/status", "/in", "/out", "/report","/files")
         .authenticated()
         .anyRequest()
         .permitAll();

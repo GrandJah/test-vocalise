@@ -64,8 +64,12 @@ const getStatus = () => {
     })
 }
 
-function setTimeWorkString() {
-    console.log("скачать отчет")
+function setTimeWorkString(data) {
+    const link = document.createElement('a');
+    link.href = "/files/" + encodeURI(data.message)
+    link.download = ''
+    console.log(link)
+    link.click();
 }
 
 
